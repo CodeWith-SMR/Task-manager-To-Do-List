@@ -306,7 +306,7 @@ function searchTodos(query) {
     // Set theme
     function setTheme(theme) {
         document.body.className = theme + '-theme';
-        themeText.textContent = theme === 'dark' ? 'Dark scheme' : 'Light scheme';
+        themeText.textContent = theme === 'dark' ? 'SMR' : 'SMR';
         localStorage.setItem('theme', theme);
         updateThemeIcon();
     }
