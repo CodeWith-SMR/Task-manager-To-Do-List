@@ -463,6 +463,37 @@ function searchTodos(query) {
             }
         });
     }
+
+
+
+
+    // Right-click disable
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Keyboard shortcuts disable
+document.addEventListener('keydown', function (e) {
+  if (e.keyCode === 123) { // F12
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 67 || e.keyCode === 74)) {
+    // Ctrl+Shift+I / Ctrl+Shift+C / Ctrl+Shift+J
+    e.preventDefault();
+  }
+  if (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83)) {
+    // Ctrl+U / Ctrl+S
+    e.preventDefault();
+  }
+});
+
+// Detect if Developer Tools are Open
+setInterval(function() {
+  if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+    document.body.innerHTML = "<h1 style='color:red; text-align:center;'>Access Denied</h1>";
+  }
+}, 500);
+
     
     // Initialize the app
     init();
