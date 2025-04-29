@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initial todos
     let todos = [
-        { id: 1, text: 'HTML #1', completed: false },
-        { id: 2, text: 'CSS #2', completed: true },
-        { id: 3, text: 'JavaScript #3', completed: false }
+        { id: 1, text: 'HTML & CSS#1', completed: false },
+        { id: 2, text: 'JavaScript #2', completed: true },
+        { id: 3, text: 'Muhammad Raza #3', completed: false }
     ];
     
     let activeNoteId = null;
